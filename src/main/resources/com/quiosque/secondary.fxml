@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiosque.controller.SecondaryController">
+   <children>
+      <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Painel Da Cozinha - Pedidos Pendentes">
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label fx:id="lblAtendidos" text="Atendidos: 0" />
+            <Label fx:id="lblCancelados" text="Cancelados: 0" />
+            <Label fx:id="lblRecebido" text="Total: R$ 0,00" />
+         </children>
+      </HBox>
+      <ListView fx:id="listaPedidos" prefHeight="350.0" prefWidth="200.0" />
+      <Button fx:id="btnPronto" mnemonicParsing="false" onAction="#marcarComoPronto" style="-fx-background-color: #ff9900; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-padding: 10 20 10 20; -fx-background-radius: 5;" text="Marcar como PRONTO" />
+   </children>
+</VBox>
