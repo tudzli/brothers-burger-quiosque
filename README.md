@@ -34,7 +34,7 @@ Se o ambiente possuir o Apache Maven configurado nas variáveis do sistema:
 
 *(Nota: Ao iniciar o programa, as duas janelas — Cliente e Gerência — serão abertas simultaneamente. O fechamento de qualquer uma das janelas encerra os processos em segundo plano).*
 
-## 🧪 Roteiro de Testes e Funcionalidades
+## Roteiro de Testes e Funcionalidades
 
 Para validar todas as regras de negócio e a comunicação entre as telas, sugerimos os seguintes cenários:
 
