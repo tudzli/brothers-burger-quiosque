@@ -15,16 +15,16 @@ public class SecondaryController {
     @FXML private ListView<String> listaPedidos;
     @FXML private Button btnPronto;
     
-    // Componentes das métricas
+    // métricas
     @FXML private Label lblAtendidos;
     @FXML private Label lblCancelados;
     @FXML private Label lblRecebido;
 
-    // Instância global para comunicação com o cliente
+    // global para comunicação com o cliente
     public static SecondaryController instancia;
     private Pedido pedidoNaCozinha;
 
-    // Contadores de estatísticas
+    // estatísticas
     private int qtdAtendidos = 0;
     private int qtdCancelados = 0;
     private double totalRecebido = 0.0;

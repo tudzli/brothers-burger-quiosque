@@ -37,12 +37,12 @@ public class Pedido {
         return total;
     }
 
-    // Gera lista formatada do pedido com quantidades
+    // Gera lista formatada do pedido com quantidades pra evitar virar uma biblia cheia de itens repetidos
     public String getListaPedidoFormatada() {
         StringBuilder sb = new StringBuilder();
         java.util.Map<String, Integer> contagem = new java.util.LinkedHashMap<>();
         
-        // Contar ocorrências de cada item
+        // Contar ocorrências de cada item, para que possamos exibir a quantidade de cada item no pedido
         for (Item item : itens) {
             String nome = item.getNome();
             contagem.put(nome, contagem.getOrDefault(nome, 0) + 1);
@@ -50,11 +50,12 @@ public class Pedido {
         
         // Montar string formatada
        for (java.util.Map.Entry<String, Integer> entry : contagem.entrySet()) {
-            // entry.getValue() é a quantidade que contamos, entry.getKey() é o nome do lanche
+            // entry.getValue() é a quantidade do item, appenda um X no meio, entry.getKey() é o nome do lanche
             sb.append(entry.getValue()).append(" x ").append(entry.getKey()).append("\n");
         }
         
         return sb.toString().trim();
+        //trim só pra formatar e não ficar feio
     }
 
     // Getters e Setters

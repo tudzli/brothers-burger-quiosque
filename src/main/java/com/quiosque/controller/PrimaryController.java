@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 //Controlador da tela de autoatendimento do cliente
 public class PrimaryController {
 
-    // Componentes visuais de quantidade
+    // quantidade
     @FXML private Label lblQtdSimples;
     @FXML private Label lblQtdMedio;
     @FXML private Label lblQtdGrande;
@@ -22,19 +22,18 @@ public class PrimaryController {
     @FXML private Label lblQtdGuarana;
     @FXML private Label lblTotal; 
     
-    // Componentes de status do pedido
+    // status do pedido
     @FXML private Label lblNumeroPedido;
     @FXML private Label lblStatusPedido;
     @FXML private Button btnReceber;
     @FXML private Button btnFinalizar;
     @FXML private javafx.scene.layout.GridPane gridProdutos;
 
-    // Instância global para comunicação com a gerência
+    // comunicação com a gerência
     public static PrimaryController instancia;
 
     // Dados do pedido atual
     private Pedido pedidoAtual;
-
     private Lanche hamburguerSimples = new Lanche("Hambúrguer Simples", 20.00);
     private Lanche hamburguerMedio = new Lanche("Hambúrguer Médio", 28.00);
     private Lanche hamburguerGrande = new Lanche("Hambúrguer Grande", 36.00);
@@ -155,7 +154,7 @@ public class PrimaryController {
 
     @FXML
     public void initialize() {
-        instancia = this; // Liga o rádio assim que a tela abre
+        instancia = this; 
         limparTela();
     }
 
